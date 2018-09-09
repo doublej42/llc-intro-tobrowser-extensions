@@ -245,6 +245,41 @@
         The manifest file is going to come up a lot in this workshop. It's the backbone of everything that your extension is and does. The manifest is where you can set the title and description, icons and all of those fancy details. But it's also where you can ask people using your extension for special permissions to control web pages.
 
         You have a basic manifest file in your exercises folder already. You can open that and see what's inside now.
+
+
+        # Bonus: JSON (javascript object notation)
+
+        You will see a lot of code that looks Like
+        ```json
+          {
+            "Date": "Sept 22nd"
+          }
+        ```
+
+        This is is called a JSON and it's a way to pass data arround on the internet. It always starts with `{` and end with `}` . This makes it an object we can use.
+
+        It also has keys and values, for example we might describe out location like 
+        
+        ```json
+        {
+          "building": "makerspace",
+          "city": "Nanaimo"
+        }
+        ```
+        
+        You can have list of values or other ojects
+
+        ```json
+        {
+          "building" : "makerspace",
+          "location" : {
+            "city": "Nanaimo",
+            "province": "bc"
+          },
+          "Things I need more of": ["Time to program", "Sleep","Video Games"]
+        }
+        ```
+
       </script>
     </section>
     <section class="slide" data-markdown>
@@ -264,7 +299,6 @@
 
       </script>
     </section>
-
     <section class="slide" data-markdown>
       <script type="text/template">
         #Changing the icon of your extension
