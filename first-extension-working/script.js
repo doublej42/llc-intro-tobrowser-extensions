@@ -11,7 +11,7 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
 chrome.pageAction.onClicked.addListener(() => {
   chrome.tabs.query({ active: true, currentWindow: true }, () => {
     chrome.tabs.executeScript(
-      { code: 'document.body.style.backgroundColor = "green";' }
+      { file: 'main.js' }
     );
   });
 });

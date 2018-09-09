@@ -1155,7 +1155,7 @@ chrome.pageAction.onClicked.addListener(function() {
         You can open the console when viewing _any_ HTML page. In Chrome, there are different ways to open the Console tab.
 
         Keyboard shortcut:
-        `COMMAND + OPTION + J` (MAC)  / `CONTROL + SHIFT + J` (WINDOWS)
+        `COMMAND + OPTION + J` (MAC)  / `CONTROL + SHIFT + J`  OR  `F12` (WINDOWS)
 
         OR
 
@@ -1248,7 +1248,7 @@ chrome.pageAction.onClicked.addListener(function() {
         Images are so much fun. In the wild world of HTML, images look like this:
 
         ```
-        <img alt="" src="http://placekitten.com/100/100">
+        <img alt="" src="https://placekitten.com/100/100">
         ```
 
         Unlike a lot of tags, ```img``` tags don't have a closing ```</img>``` at their close.
@@ -1269,7 +1269,7 @@ chrome.pageAction.onClicked.addListener(function() {
         Conveniently enough, it's called setAttribute. Here's an example:
 
         ```javascript
-        image.setAttribute('src', 'http://placekitten.com/200/300')
+        image.setAttribute('src', 'https://placekitten.com/200/300')
         ```
 
         There's only one problem: we have a lot of images on the page. Which image do we want to change?
@@ -1416,7 +1416,7 @@ for (var i = 0; i < allImages.length; i++) {
         Now that we have the allImages[i] that represents the image we want to change, we can add a line of javascript in our loop that looks like this:
 
         ```javascript
-        allImages[i].setAttribute('src', 'http://placekitten.com/200/300');
+        allImages[i].setAttribute('src', 'https://placekitten.com/200/300');
         ```
 
         That will take the src attribute of the image and replace whatever is currently there with a placekitten link.
@@ -1462,7 +1462,7 @@ var imageWidth = allImages[i].clientWidth;
         Then we can string together those new height and width values into the placeholder image link to tie it all together.
 
         ```javascript
-allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight)
+allImages[i].setAttribute('src', 'https://placekitten.com/' + imageWidth + '/' + imageHeight)
 
         ```
 
@@ -1481,7 +1481,7 @@ var allImages = document.getElementsByTagName('img');
 for (var i = 0; i < allImages.length; i++) {
   var imageHeight = allImages[i].clientHeight;
   var imageWidth = allImages[i].clientWidth;
-  allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight)
+  allImages[i].setAttribute('src', 'https://placekitten.com/' + imageWidth + '/' + imageHeight)
 }
         ```
 
@@ -1634,7 +1634,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         ```
         var thisImageHeight = this.clientHeight;
         var thisImageWidth = this.clientWidth;
-        var imageLink = "http://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
+        var imageLink = "https://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
         this.setAttribute('src', imageLink);
         ```
 
@@ -1652,7 +1652,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
           allImages[i].addEventListener('click', function() {
             var thisImageHeight = this.clientHeight;
             var thisImageWidth = this.clientWidth;
-            var imageLink = "http://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
+            var imageLink = "https://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
             this.setAttribute('src', imageLink);
           })
         }
