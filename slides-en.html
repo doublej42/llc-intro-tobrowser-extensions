@@ -34,7 +34,6 @@
       <h2><span class="cursive">with</span> Jeff Jacob</h2>
       <ul>
         <li><a href="mailto:clcjeff@gametech.ca">clcjeff@gametech.ca</a></li>
-        <li><a href="http://twitter.com/doublej42">@doublej42</a></li>
       </ul>
 
       <div class="sponsor">
@@ -1659,6 +1658,34 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         ```
 
         MAGIC!
+        
+        # Bonus: Change image on hover
+
+        Can you figure out how to replace the image when you point at it and change it back when you move your mouse away?
+
+        Hint: there are two events `mouseenter` and `mouseleave` a large list of events is available at https://www.w3schools.com/jsref/dom_obj_event.asp
+
+        # Bonus solution
+
+        This was my solution to adding hover support
+
+        ```javascript
+        var allImages = document.getElementsByTagName('img');
+        console.log(allImages);
+        for (var i = 0; i < allImages.length; i++) {
+          allImages[i].addEventListener('mouseenter',function() {
+              var imageHeight = this.clientHeight;
+              var imageWidth = this.clientWidth;
+              this.setAttribute('data-originalsrc', this.getAttribute('src'));
+              this.setAttribute('src', 'https://placekitten.com/' + imageWidth + '/' + imageHeight);
+           });
+              allImages[i].addEventListener('mouseleave',function() {
+              this.setAttribute('src', this.getAttribute('data-originalsrc'));
+           });
+           console.log(allImages[i]);
+        }
+        ```
+
 
       </script>
     </section>
@@ -1668,8 +1695,6 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         #Stretch 2: The incredible disappearing element
 
         ![](framework/img/workshop/drop.gif)
-
-
       </script>
     </section>
 
@@ -1850,8 +1875,6 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
       <h2><span class="cursive">with</span> Jeff Jacob</h2>
       <ul>
         <li><a href="mailto:clcjeff@gametech.ca">clcjeff@gametech.ca</a></li>
-        
-        <li><a href="http://twitter.com/doublej42">@doublej42</a></li>
       </ul>
 
       <p class="attribution">Slide presentation created by <a href="http://christinatruong.com">Christina Truong</a> based on <a href="https://github.com/LeaVerou/csss">Lea Verou's SlideShow</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
