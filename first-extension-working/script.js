@@ -8,3 +8,11 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
    }]);
  });
 
+ chrome.pageAction.onClicked.addListener(() => {
+  chrome.tabs.query({active: true, currentWindow: true}, () =>{
+    chrome.tabs.executeScript(
+      tabs[0].id,
+      {code:  'document.body.style.backgroundColor = "green";' }
+    );
+  });
+ });
