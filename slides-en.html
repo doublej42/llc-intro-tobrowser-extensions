@@ -279,7 +279,6 @@
           "Things I need more of": ["Time to program", "Sleep","Video Games"]
         }
         ```
-
       </script>
     </section>
     <section class="slide" data-markdown>
@@ -625,7 +624,6 @@ chrome.pageAction.onClicked.addListener( function() {
 
         ```javascript
 chrome.tabs.executeScript(
-  tabs[0].id,
   {code:  'document.body.style.backgroundColor = "green";' }
 );
         ```
@@ -663,7 +661,6 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
 chrome.pageAction.onClicked.addListener(function() {
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     chrome.tabs.executeScript(
-      tabs[0].id,
       {code:  'document.body.style.backgroundColor = "green";' }
     );
   });

@@ -1,6 +1,6 @@
 {
     "name": "Kitten Madness",
-    "version": "1.2",
+    "version": "1.3",
     "description": "Improve the internet",
     "manifest_version": 2,
     "permissions": ["activeTab", "declarativeContent"],
